@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">Create an Account</h1>
+<hr>
+<form method="post">
+    {% csrf_token %}
+    <p style="color:red;text-align:center;font-size:22px;font-weight:bold">{{msg}}</p>
+    {% for r in rdata %}
+<table align="center">
+  <tr>
+    <td>Name</td>
+    <td><input type="text" name="t1" required value="{{r.name}}"></td>
+  </tr>
+   <tr>
+    <td>Gender</td>
+    <td><input type="text" name="r1" required value="{{r.gender}}"></td>
+  </tr>
+     <tr>
+    <td>City</td>
+    <td><input type="text" name="t2" required value="{{r.city}}"></td>
+  </tr>
+     <tr>
+    <td>Address</td>
+    <td><input type="text" name="t3" required value="{{r.address}}"></td>
+  </tr>
+     <tr>
+    <td>Pincode</td>
+    <td><input type="text" name="t4" required value="{{r.pincode}}"></td>
+  </tr>
+     <tr>
+    <td>Contact</td>
+    <td><input type="text" name="t5" required value="{{r.contact}}"></td>
+  </tr>
+     <tr>
+    <td>Email</td>
+    <td><input type="text" name="t6" required value="{{r.email}}"></td>
+     <tr>
+    <td></td>
+    <td><input type="submit" value="Edit"></td>
+  </tr>
+</table>
+    {% endfor %}
+</form>
+</body>
+</html>
